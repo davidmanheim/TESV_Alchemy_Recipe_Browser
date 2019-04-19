@@ -1,0 +1,110 @@
+Name;Primary Effect;Secondary Effect;Tertiary Effect;Quaternary Effect;Val;Farm;MagBonus;Ext
+Abecean Longfin;Weakness to Frost;Fortify Sneak;Weakness to Poison;Fortify Restoration;15;3;;BG
+Ancestor Moth Wing;Damage Stamina;Fortify Conjuration;Damage Magicka Regen;Fortify Enchanting;2;;;DG
+Ash Creep Cluster;Damage Stamina;Invisibility;Resist Fire;Fortify Destruction;20;;;DB
+Ash Hopper Jelly;Restore Health;Fortify Light Armor;Resist Shock;Weakness to Frost;20;;;DB
+Ashen Grass Pod;Resist Fire;Weakness to Shock;Fortify Lockpicking;Fortify Sneak;1;;M1:1.33;DB
+Bear Claws;Restore Stamina;Fortify Health;Fortify One-handed;Damage Magicka Regen;2;;M1:.8;BG
+Bee;Restore Stamina;Ravage Stamina;Regenerate Stamina;Weakness to Shock;3;;;BG
+Beehive Husk;Resist Poison;Fortify Light Armor;Fortify Sneak;Fortify Destruction;5;;M1:.5;BG
+Bleeding Crown;Weakness to Fire;Fortify Block;Weakness to Poison;Resist Magic;10;3;;BG
+Blisterwort;Damage Stamina;Frenzy;Restore Health;Fortify Smithing;12;4;M3:.6;BG
+Blue Butterfly Wing;Damage Stamina;Fortify Conjuration;Damage Magicka Regen;Fortify Enchanting;2;;;BG
+Blue Dartwing;Resist Shock;Fortify Pickpocket;Restore Health;Fear;1;;;BG
+Blue Mountain Flower;Restore Health;Fortify Conjuration;Fortify Health;Damage Magicka Regen;2;3;;BG
+Boar Tusk;Fortify Stamina;Fortify Health;Fortify Block;Frenzy;20;;M1:1.25|C1:5.9|C2:5.9;DB
+Bone Meal;Damage Stamina;Resist Fire;Fortify Conjuration;Ravage Stamina;5;;;BG
+Briar Heart;Restore Magicka;Fortify Block;Paralysis;Fortify Magicka;20;;M2:.5;BG
+Burnt Spriggan Wood;Weakness to Fire;Fortify Alteration;Damage Magicka Regen;Slow;20;;;DB
+Butterfly Wing;Restore Health;Fortify Barter;Lingering Damage Stamina;Damage Magicka;3;;;BG
+Canis Root;Damage Stamina;Fortify One-handed;Fortify Marksman;Paralysis;5;4;;BG
+Charred Skeever Hide;Restore Stamina;Cure Disease;Resist Poison;Restore Health;1;;C2:.36;BG
+Chaurus Eggs;Weakness to Poison;Fortify Stamina;Damage Magicka;Invisibility;10;;;BG
+Chaurus Hunter Antennae;Damage Stamina;Fortify Conjuration;Damage Magicka Regen;Fortify Enchanting;2;;;DG
+Chicken's Egg;Resist Magic;Damage Magicka Regen;Waterbreathing;Lingering Damage Stamina;2;;;BG
+Creep Cluster;Restore Magicka;Damage Stamina Regen;Fortify Carry Weight;Weakness to Magic;1;5;;BG
+Crimson Nirnroot;Damage Health;Damage Stamina;Invisibility;Resist Magic;10;;M1:3|M2:3|C1:3.3;BG
+Cyrodilic Spadetail;Damage Stamina;Fortify Restoration;Fear;Ravage Health;15;3;;BG
+Daedra Heart;Restore Health;Damage Stamina Regen;Damage Magicka;Fear;250;;;BG
+Deathbell;Damage Health;Ravage Stamina;Slow;Weakness to Poison;4;3;M1:1.5|C1:1.6|C2:2.1;BG
+Dragon's Tongue;Resist Fire;Fortify Barter;Fortify Illusion;Fortify Two-handed;5;4;;BG
+Dwarven Oil;Weakness to Magic;Fortify Illusion;Regenerate Magicka;Restore Magicka;15;;;BG
+Ectoplasm;Restore Magicka;Fortify Destruction;Fortify Magicka;Damage Health;25;;M2:.8;BG
+Elves Ear;Restore Magicka;Fortify Marksman;Weakness to Frost;Resist Fire;10;;;BG
+Emperor Parasol Moss;Damage Health;Fortify Magicka;Regenerate Health;Fortify Two-handed;1;;M1:1.5|C1:19.7;DB
+Eye of Sabre Cat;Restore Stamina;Ravage Health;Damage Magicka;Restore Health;2;;;BG
+Falmer Ear;Damage Health;Frenzy;Resist Poison;Fortify Lockpicking;10;;;BG
+Felsaad Tern Feathers;Restore Health;Fortify Light Armor;Cure Disease;Resist Magic;15;;;DB
+Fire Salts;Weakness to Frost;Resist Fire;Restore Magicka;Regenerate Magicka;50;;;BG
+Fly Amanita;Resist Fire;Fortify Two-handed;Frenzy;Regenerate Stamina;2;4;;BG
+Frost Mirriam;Resist Frost;Fortify Sneak;Ravage Magicka;Damage Stamina Regen;1;;;BG
+Frost Salts;Weakness to Fire;Resist Frost;Restore Magicka;Fortify Conjuration;100;;;BG
+Garlic;Resist Poison;Fortify Stamina;Regenerate Magicka;Regenerate Health;1;;;BG
+Giant Lichen;Weakness to Shock;Ravage Health;Weakness to Poison;Restore Magicka;5;4;;BG
+Giant's Toe;Damage Stamina;Fortify Health;Fortify Carry Weight;Damage Stamina Regen;20;;C2:5.9;BG
+Gleamblossom;Resist Magic;Fear;Regenerate Health;Paralysis;5;;;DG
+Glow Dust;Damage Magicka;Damage Magicka Regen;Fortify Destruction;Resist Shock;20;;;BG
+Glowing Mushroom;Resist Shock;Fortify Destruction;Fortify Smithing;Fortify Health;5;5;;BG
+Grass Pod;Resist Poison;Ravage Magicka;Fortify Alteration;Restore Magicka;1;3;;BG
+Hagraven Claw;Resist Magic;Lingering Damage Magicka;Fortify Enchanting;Fortify Barter;20;;;BG
+Hagraven Feathers;Damage Magicka;Fortify Conjuration;Frenzy;Weakness to Shock;20;;;BG
+Hanging Moss;Damage Magicka;Fortify Health;Damage Magicka Regen;Fortify One-handed;1;;;BG
+Hawk Beak;Restore Stamina;Resist Frost;Fortify Carry Weight;Resist Shock;15;;;BG
+Hawk Feathers;Cure Disease;Fortify Light Armor;Fortify One-handed;Fortify Sneak;15;;C1:.36;BG
+Hawk's Egg;Resist Magic;Damage Magicka Regen;Waterbreathing;Lingering Damage Stamina;5;;;HF
+Histcarp;Restore Stamina;Fortify Magicka;Damage Stamina Regen;Waterbreathing;6;3;;BG
+Honeycomb;Restore Stamina;Fortify Block;Fortify Light Armor;Ravage Stamina;5;;C2:.5;BG
+Human Flesh;Damage Health;Paralysis;Restore Magicka;Fortify Sneak;1;;;BG
+Human Heart;Damage Health;Damage Magicka;Damage Magicka Regen;Frenzy;0;;;BG
+Ice Wraith Teeth;Weakness to Frost;Fortify Heavy Armor;Invisibility;Weakness to Fire;30;;;BG
+Imp Stool;Damage Health;Lingering Damage Health;Paralysis;Restore Health;0;4;M4:.6;BG
+Jazbay Grapes;Weakness to Magic;Fortify Magicka;Regenerate Magicka;Ravage Health;1;3;;BG
+Juniper Berries;Weakness to Fire;Fortify Marksman;Regenerate Health;Damage Stamina Regen;1;4;;BG
+Large Antlers;Restore Stamina;Fortify Stamina;Slow;Damage Stamina Regen;2;;;BG
+Lavender;Resist Magic;Fortify Stamina;Ravage Magicka;Fortify Conjuration;1;3;;BG
+Luna Moth Wing;Damage Magicka;Fortify Light Armor;Regenerate Health;Invisibility;5;;;BG
+Moon Sugar;Weakness to Fire;Resist Frost;Restore Magicka;Regenerate Magicka;50;;;BG
+Mora Tapinella;Restore Magicka;Lingering Damage Health;Regenerate Stamina;Fortify Illusion;4;3;;BG
+Mudcrab Chitin;Restore Stamina;Cure Disease;Resist Poison;Resist Fire;2;;;BG
+Namira's Rot;Damage Magicka;Fortify Lockpicking;Fear;Regenerate Health;0;3;;BG
+Netch Jelly;Paralysis;Fortify Carry Weight;Restore Stamina;Fear;20;;M3:2;DB
+Nightshade;Damage Health;Damage Magicka Regen;Lingering Damage Stamina;Fortify Destruction;8;3;M4:.8;BG
+Nirnroot;Damage Health;Damage Stamina;Invisibility;Resist Magic;10;;C1:12.6;BG
+Nordic Barnacle;Damage Magicka;Waterbreathing;Regenerate Health;Fortify Pickpocket;5;;;BG
+Orange Dartwing;Restore Stamina;Ravage Magicka;Fortify Pickpocket;Lingering Damage Health;1;;;BG
+Pearl;Restore Stamina;Fortify Block;Restore Magicka;Resist Shock;2;;;BG
+Pine Thrush Egg;Restore Stamina;Fortify Lockpicking;Weakness to Poison;Resist Shock;2;;;BG
+Poison Bloom;Damage Health;Slow;Fortify Carry Weight;Fear;5;;M1:1.5|C1:1.6;DG
+Powdered Mammoth Tusk;Restore Stamina;Fortify Sneak;Weakness to Fire;Fear;2;;;BG
+Purple Mountain Flower;Restore Stamina;Fortify Sneak;Lingering Damage Magicka;Resist Frost;2;3;;BG
+Red Mountain Flower;Restore Magicka;Ravage Magicka;Fortify Magicka;Damage Health;2;3;;BG
+River Betty;Damage Health;Fortify Alteration;Slow;Fortify Carry Weight;15;3;M1:2.5|C1:34.5;BG
+Rock Warbler Egg;Restore Health;Fortify One-handed;Damage Stamina;Weakness to Magic;2;;;BG
+Sabre Cat Tooth;Restore Stamina;Fortify Heavy Armor;Fortify Smithing;Weakness to Poison;2;;;BG
+Salmon Roe;Restore Stamina;Waterbreathing;Fortify Magicka;Regenerate Magicka;5;3;M1:.4|M3:12.5|C2:15.4|C3:1.05;BG
+Salt Pile;Weakness to Magic;Fortify Restoration;Slow;Regenerate Magicka;2;;;BG
+Scaly Pholiota;Weakness to Magic;Fortify Illusion;Regenerate Stamina;Fortify Carry Weight;4;5;;BG
+Scathecraw;Ravage Health;Ravage Stamina;Ravage Magicka;Lingering Damage Health;1;;;DB
+Silverside Perch;Restore Stamina;Damage Stamina Regen;Ravage Health;Resist Frost;15;3;;BG
+Skeever Tail;Damage Stamina Regen;Ravage Health;Damage Health;Fortify Light Armor;3;;;BG
+Slaughterfish Egg;Resist Poison;Fortify Pickpocket;Lingering Damage Health;Fortify Stamina;3;3;;BG
+Slaughterfish Scales;Resist Frost;Lingering Damage Health;Fortify Heavy Armor;Fortify Block;3;;;BG
+Small Antlers;Weakness to Poison;Fortify Restoration;Lingering Damage Stamina;Damage Health;2;;;BG
+Small Pearl;Restore Stamina;Fortify One-handed;Fortify Restoration;Resist Frost;2;;;BG
+Snowberries;Resist Fire;Fortify Enchanting;Resist Frost;Resist Shock;4;4;;BG
+Spawn Ash;Ravage Stamina;Resist Fire;Fortify Enchanting;Ravage Magicka;20;;;DB
+Spider Egg;Damage Stamina;Damage Magicka Regen;Fortify Lockpicking;Fortify Marksman;5;;;BG
+Spriggan Sap;Damage Magicka Regen;Fortify Enchanting;Fortify Smithing;Fortify Alteration;15;;;BG
+Swamp Fungal Pod;Resist Shock;Lingering Damage Magicka;Paralysis;Restore Health;5;3;;BG
+Taproot;Weakness to Magic;Fortify Illusion;Regenerate Magicka;Restore Magicka;15;;;BG
+Thistle Branch;Resist Frost;Ravage Stamina;Resist Poison;Fortify Heavy Armor;1;3;M3:.75;BG
+Torchbug Thorax;Restore Stamina;Lingering Damage Magicka;Weakness to Magic;Fortify Stamina;1;;;BG
+Trama Root;Weakness to Shock;Fortify Carry Weight;Damage Magicka;Slow;1;;;DB
+Troll Fat;Resist Poison;Fortify Two-handed;Frenzy;Damage Health;15;;;BG
+Tundra Cotton;Resist Magic;Fortify Magicka;Fortify Block;Fortify Barter;1;3;;BG
+Vampire Dust;Invisibility;Restore Magicka;Regenerate Health;Cure Disease;25;;;BG
+Void Salts;Weakness to Shock;Resist Magic;Damage Health;Fortify Magicka;125;;;BG
+Wheat;Restore Health;Fortify Health;Damage Stamina Regen;Lingering Damage Magicka;5;4;;BG
+White Cap;Weakness to Frost;Fortify Heavy Armor;Restore Magicka;Ravage Magicka;0;2;;BG
+Wisp Wrappings;Restore Stamina;Fortify Destruction;Fortify Carry Weight;Resist Magic;2;;;BG
+Yellow Mountain Flower;Resist Poison;Fortify Restoration;Fortify Health;Damage Stamina Regen;2;;M2:1.25;DG
