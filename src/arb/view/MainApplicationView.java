@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.control.SplitPane;
 
 /**
- * This class represents the root view of the application.
+ * This class represents the main content view of the application.
  */
 public class MainApplicationView extends SplitPane {
 
@@ -23,9 +23,9 @@ public class MainApplicationView extends SplitPane {
 	}
 
 	private void createChildElements() {
-		SideBarView sideBarView = LayoutFactory.getInstance().createSideBarView();
-		ResultTableView resultsTableView = LayoutFactory.getInstance().createResultTableView();
-		ObservableList<Node> items = this.getItems();
+		final SideBarView sideBarView = LayoutFactory.getInstance().createSideBarView();
+		final ResultTableView resultsTableView = LayoutFactory.getInstance().createResultTableView();
+		final ObservableList<Node> items = this.getItems();
 		items.add(sideBarView);
 		items.add(resultsTableView);
 	}

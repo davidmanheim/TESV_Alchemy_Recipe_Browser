@@ -23,6 +23,7 @@ import arb.view.filter.FilterPotionsActionButtons;
 import arb.view.filter.FilterPotionsView;
 import arb.view.filter.GameExtensionCheckBoxes;
 import arb.view.result.ResultTableView;
+import arb.view.roothelper.ShadowRectangle;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
@@ -140,6 +141,10 @@ public class LayoutFactory {
 
 	public LabeledComboBox createLabeledComboBox() {
 		return new LabeledComboBox();
+	}
+
+	public ShadowRectangle createShadowRectangle() {
+		return new ShadowRectangle();
 	}
 
 	public void showHelpView() {
