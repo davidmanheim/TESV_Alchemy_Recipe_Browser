@@ -106,15 +106,16 @@ public class WindowHelper {
 				this.yOffset = mouseEvent.getSceneY();
 			} else if (MouseEvent.MOUSE_DRAGGED.equals(mouseEventType) && !Cursor.DEFAULT.equals(this.cursorEvent)) {
 				this.handleMouseDraggedEvent(mouseEvent, mouseEventX, mouseEventY);
-			} else if (MouseEvent.MOUSE_DRAGGED.equals(mouseEventType) && Cursor.DEFAULT.equals(this.cursorEvent)) {
+			} else if (MouseEvent.MOUSE_DRAGGED.equals(mouseEventType) && Cursor.DEFAULT.equals(this.cursorEvent)
+					&& !this.cursorOnMenuButtons()) {
 				this.stage.setX(mouseEvent.getScreenX() - this.xOffset);
 				this.stage.setY(mouseEvent.getScreenY() - this.yOffset);
 			}
 		}
 
 		/**
-		 * Updates the cursor event reference for this class to match the
-		 * application state.
+		 * Updates the cursor event reference for this class to match the application
+		 * state.
 		 */
 		private void updateCursorEvent(final double mouseEventX, final double mouseEventY, final double sceneWidth,
 				final double sceneHeight) {
@@ -168,7 +169,8 @@ public class WindowHelper {
 
 		/** Handles the vertical component of the event. */
 		private void updateVerticalComponent(final MouseEvent mouseEvent, final double mouseEventY) {
-			final double minHeight = this.stage.getMinHeight() > (BORDER * 2) ? this.stage.getMinHeight() : (BORDER * 2);
+			final double minHeight = this.stage.getMinHeight() > (BORDER * 2) ? this.stage.getMinHeight()
+					: (BORDER * 2);
 			if (Cursor.NW_RESIZE.equals(this.cursorEvent) || Cursor.N_RESIZE.equals(this.cursorEvent)
 					|| Cursor.NE_RESIZE.equals(this.cursorEvent)) {
 				if (this.stage.getHeight() > minHeight || mouseEventY < 0) {
