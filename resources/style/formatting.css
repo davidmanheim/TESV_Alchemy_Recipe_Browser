@@ -5,6 +5,7 @@
 	-arb-color-stone: #336b87;
 	-arb-color-mist: #90afc5;
 	-arb-color-autumn-foliage: #763626;
+
 	-fx-font-family: "Futura Condensed BQ";
 	-fx-font-size: 12pt;
 	-fx-font-color: -arb-color-shadow;
@@ -24,6 +25,10 @@
 	-fx-accent: -arb-color-stone;
 	-fx-focus-color: -arb-color-stone;
 	-fx-cell-focus-inner-border: -arb-color-stone;
+}
+
+.arb-help-view {
+	-fx-background-color: red;
 }
 
 .arb-side-bar-view {
@@ -59,7 +64,8 @@
 /* Application system menu buttons (in the top corners of the screen). This must be after .button to override those configurations. */
 .arb-system-menu-button {
 	-fx-background-color: transparent;
-	-fx-border-color: transparent; -fx-border-width : 0;
+	-fx-border-color: transparent;
+	-fx-border-width : 0;
 	-fx-background-radius: 0;
 	-fx-border-radius: 0;
 	-fx-border-width: 0;
@@ -210,67 +216,11 @@
 	-fx-background-color: transparent;
 }
 
-/* Menu buttons */
-
 /*
-*	Minimize button
+    Defines the rectangle responsible for the shadow
 */
-.decoration-button-minimize {
-	-fx-background-radius: 0;
-	-fx-border-style: null;
-	-fx-background-color: null;
-	-fx-background-image: url("./minimize.png");
-	-fx-background-repeat: no-repeat;
-}
-
-.decoration-button-minimize:hover {
-	-fx-background-color: null;
-	-fx-background-image: url("./minimize-hover.png");
-	-fx-background-repeat: no-repeat;
-}
-/*
-*	Maximize button
-*/
-.decoration-button-maximize {
-	-fx-background-radius: 0;
-	-fx-border-style: null;
-	-fx-background-color: null;
-	-fx-background-image: url("./maximize.png");
-	-fx-background-repeat: no-repeat;
-}
-
-.decoration-button-maximize:hover {
-	-fx-background-color: null;
-	-fx-background-image: url("./maximize-hover.png");
-	-fx-background-repeat: no-repeat;
-}
-
-.decoration-button-restore {
-	-fx-background-radius: 0;
-	-fx-border-style: null;
-	-fx-background-color: null;
-	-fx-background-image: url("./restore.png");
-	-fx-background-repeat: no-repeat;
-}
-
-.decoration-button-restore:hover {
-	-fx-background-color: null;
-	-fx-background-image: url("./restore-hover.png");
-	-fx-background-repeat: no-repeat;
-}
-/*
-*	Close button
-*/
-.decoration-button-close {
-	-fx-background-radius: 0;
-	-fx-border-style: null;
-	-fx-background-color: null;
-	-fx-background-image: url("./close.png");
-	-fx-background-repeat: no-repeat;
-}
-
-.decoration-button-close:hover {
-	-fx-background-color: null;
-	-fx-background-image: url("./close-hover.png");
-	-fx-background-repeat: no-repeat;
+.decoration-shadow{
+    -fx-fill: black;
+    -fx-background-color: transparent;
+    -fx-stroke-width: 0;
 }

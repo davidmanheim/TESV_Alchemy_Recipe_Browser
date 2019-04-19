@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 public class HelpView extends BorderPane {
 
+	private static final String MENU_BAR_CSS_CLASS = "menu-bar";
+
 	private final Stage stage;
 
 	public HelpView(final Stage stage) {
@@ -35,6 +37,7 @@ public class HelpView extends BorderPane {
 		});
 		final ApplicationMenuSpacer applicationMenuSpacer = MenuFactory.getInstance().createApplicationMenuSpacer();
 		final HBox systemMenuBar = new HBox();
+		systemMenuBar.getStyleClass().add(MENU_BAR_CSS_CLASS);
 		HBox.setHgrow(applicationMenuSpacer, Priority.SOMETIMES);
 		this.setTop(systemMenuBar);
 		systemMenuBar.getChildren().addAll(applicationMenuSpacer, closeButton);

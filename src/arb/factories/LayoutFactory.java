@@ -6,6 +6,7 @@ import arb.util.WindowHelper;
 import arb.view.HelpView;
 import arb.view.LogView;
 import arb.view.MainApplicationView;
+import arb.view.RootStackPane;
 import arb.view.SearchView;
 import arb.view.SettingsView;
 import arb.view.SideBarView;
@@ -23,6 +24,8 @@ import arb.view.filter.FilterPotionsView;
 import arb.view.filter.GameExtensionCheckBoxes;
 import arb.view.result.ResultTableView;
 import javafx.scene.Scene;
+import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -39,6 +42,10 @@ public class LayoutFactory {
 			layoutFactoryInstance = new LayoutFactory();
 		}
 		return layoutFactoryInstance;
+	}
+
+	public RootStackPane createRootStackPane(Region applicationView) {
+		return new RootStackPane(applicationView);
 	}
 
 	public MainApplicationView createMainApplicationView() {
@@ -146,14 +153,17 @@ public class LayoutFactory {
 	}
 
 	private void createNewHelpView() {
+		// TODO - maybe refactor this into some new classes?
 		final Stage helpStage = new Stage();
 		helpStage.setOnCloseRequest(event -> ViewController.getInstance().setHelpStage(null));
-		helpStage.initStyle(StageStyle.UNDECORATED);
+		helpStage.initStyle(StageStyle.TRANSPARENT);
 		helpStage.centerOnScreen();
 		final HelpView helpView = new HelpView(helpStage);
 		ViewController.getInstance().setHelpStage(helpStage);
-		final Scene helpScene = new Scene(helpView, 700, 700);
+		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(helpView);
+		final Scene helpScene = new Scene(rootStackPane, 700, 600);
 		helpScene.getStylesheets().add(ResourcePathConstants.APPLICATION_CSS);
+		helpScene.setFill(Color.TRANSPARENT);
 		helpStage.setScene(helpScene);
 		WindowHelper.addResizeListener(helpStage);
 		helpStage.show();

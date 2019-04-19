@@ -8,15 +8,17 @@ import org.apache.logging.log4j.Logger;
 import arb.factories.LayoutFactory;
 import arb.factories.MenuFactory;
 import arb.util.LabelConstants;
-import arb.util.WindowHelper;
 import arb.util.ResourcePathConstants;
+import arb.util.WindowHelper;
 import arb.view.MainApplicationView;
+import arb.view.RootStackPane;
 import arb.view.menu.ApplicationTitleBar;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -28,7 +30,8 @@ public class ARB extends Application {
 	@Override
 	public void start(final Stage stage) throws IOException {
 		final BorderPane root = this.createRootPane(stage);
-		final Scene scene = this.createScene(root);
+		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(root);
+		final Scene scene = this.createScene(rootStackPane);
 		this.configureStage(stage, scene);
 		// These messages are just to separate executions if a log file gets reused.
 		LOG.info("==============================================");
@@ -36,14 +39,14 @@ public class ARB extends Application {
 	}
 
 	/**
-	 * Creates and returns a Scene, using the given Parent object as a root
-	 * element.
+	 * Creates and returns a Scene, using the given Parent object as a root element.
 	 */
 	private Scene createScene(final Parent root) {
 		final Scene scene = new Scene(root);
-		final String applicationCSS = this.getClass().getResource(ResourcePathConstants.APPLICATION_CSS).toExternalForm();
+		final String applicationCSS = this.getClass().getResource(ResourcePathConstants.APPLICATION_CSS)
+				.toExternalForm();
 		scene.getStylesheets().add(applicationCSS);
-		scene.getStylesheets().add(applicationCSS);
+		scene.setFill(Color.TRANSPARENT);
 		return scene;
 	}
 
@@ -63,7 +66,7 @@ public class ARB extends Application {
 	private void configureStage(final Stage stage, final Scene scene) {
 		ViewController.getInstance().setStage(stage);
 		stage.getIcons().add(new Image(this.getClass().getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
-		stage.initStyle(StageStyle.UNDECORATED);
+		stage.initStyle(StageStyle.TRANSPARENT);
 		stage.setTitle(LabelConstants.APPLICATION_TITLE);
 		stage.setScene(scene);
 		WindowHelper.addResizeListener(stage);
