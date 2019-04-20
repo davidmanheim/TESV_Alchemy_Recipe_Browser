@@ -1,6 +1,7 @@
 package arb.model.characterconfig;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,8 @@ public class OrdinatorCharacterConfig {
 
 	private static final boolean DEFAULT_CHECK_BOX = false;
 
-	private static final List<String> EXCEPTIONS_TO_POISONER = Arrays.asList("Fear", "Frenzy");
+	private static final List<String> EXCEPTIONS_TO_POISONER = Arrays.asList("Fear",
+			"Frenzy");
 
 	private int alchemyMasteryLevel;
 
@@ -44,15 +46,18 @@ public class OrdinatorCharacterConfig {
 		this.alchemyMasteryLevel = mapping.containsKey(CharacterConfigKey.ALCHEMY_MASTERY)
 				? Integer.parseInt(mapping.get(CharacterConfigKey.ALCHEMY_MASTERY))
 				: DEFAULT_ALCHEMY_MASTERY;
-		this.physicianBonusType = mapping.containsKey(CharacterConfigKey.PHYSICIAN_ORDINATOR)
-				? mapping.get(CharacterConfigKey.PHYSICIAN_ORDINATOR)
-				: Strings.EMPTY;
+		this.physicianBonusType = mapping
+				.containsKey(CharacterConfigKey.PHYSICIAN_ORDINATOR)
+						? mapping.get(CharacterConfigKey.PHYSICIAN_ORDINATOR)
+						: Strings.EMPTY;
 		this.isAdvancedLabChecked = mapping.containsKey(CharacterConfigKey.ADVANCED_LAB)
 				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.ADVANCED_LAB))
 				: DEFAULT_CHECK_BOX;
-		this.isPoisonerChecked = mapping.containsKey(CharacterConfigKey.POISONER_ORDINATOR)
-				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.POISONER_ORDINATOR))
-				: DEFAULT_CHECK_BOX;
+		this.isPoisonerChecked = mapping
+				.containsKey(CharacterConfigKey.POISONER_ORDINATOR)
+						? Boolean.parseBoolean(
+								mapping.get(CharacterConfigKey.POISONER_ORDINATOR))
+						: DEFAULT_CHECK_BOX;
 		this.isTWDNKYChecked = mapping.containsKey(CharacterConfigKey.TWDNKY)
 				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.TWDNKY))
 				: DEFAULT_CHECK_BOX;
@@ -68,6 +73,15 @@ public class OrdinatorCharacterConfig {
 		this.isAdvancedLabChecked = DEFAULT_CHECK_BOX;
 		this.isPoisonerChecked = DEFAULT_CHECK_BOX;
 		this.isTWDNKYChecked = DEFAULT_CHECK_BOX;
+		this.mapping = new HashMap<>();
+		this.mapping.put(CharacterConfigKey.ALCHEMY_MASTERY,
+				String.valueOf(DEFAULT_ALCHEMY_MASTERY));
+		this.mapping.put(CharacterConfigKey.PHYSICIAN_ORDINATOR, Strings.EMPTY);
+		this.mapping.put(CharacterConfigKey.ADVANCED_LAB,
+				String.valueOf(DEFAULT_CHECK_BOX));
+		this.mapping.put(CharacterConfigKey.POISONER_ORDINATOR,
+				String.valueOf(DEFAULT_CHECK_BOX));
+		this.mapping.put(CharacterConfigKey.TWDNKY, String.valueOf(DEFAULT_CHECK_BOX));
 	}
 
 	public double getAlchemyMasteryMultiplier() {
@@ -79,9 +93,11 @@ public class OrdinatorCharacterConfig {
 		if (effectName.contains("Health") && effect.isPositive()
 				&& this.physicianBonusType.equals(LabelConstants.PHYSICIAN_HEALTH)
 				|| effectName.contains("Magicka") && effect.isPositive()
-						&& this.physicianBonusType.equals(LabelConstants.PHYSICIAN_MAGICKA)
+						&& this.physicianBonusType
+								.equals(LabelConstants.PHYSICIAN_MAGICKA)
 				|| effectName.contains("Stamina") && effect.isPositive()
-						&& this.physicianBonusType.equals(LabelConstants.PHYSICIAN_STAMINA)) {
+						&& this.physicianBonusType
+								.equals(LabelConstants.PHYSICIAN_STAMINA)) {
 			return 1.5;
 		} else {
 			return 1;
@@ -92,7 +108,8 @@ public class OrdinatorCharacterConfig {
 		return this.isAdvancedLabChecked ? 1.25 : 1;
 	}
 
-	public double getPoisonerMultiplier(final Potion potion, final Effect effect, final int skillLevel) {
+	public double getPoisonerMultiplier(final Potion potion, final Effect effect,
+			final int skillLevel) {
 		return this.isPoisonerChecked && !potion.isPotion() && !effect.isPositive()
 				&& !this.isExceptionToPoisoner(effect) ? 1 + .01 * skillLevel : 1;
 	}

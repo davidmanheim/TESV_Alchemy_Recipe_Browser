@@ -39,27 +39,27 @@ public class FilterPotionsView extends VBox {
 	}
 
 	public CheckBox getHarvestableOnlyCheckbox() {
-		return harvestableOnlyCheckbox;
+		return this.harvestableOnlyCheckbox;
 	}
 
 	public CheckBox getPureResultsOnlyCheckbox() {
-		return pureResultsOnlyCheckbox;
+		return this.pureResultsOnlyCheckbox;
 	}
 
 	public FilterPotionByTypeRadioButtons getFilterPotionByTypeRadioButtons() {
-		return filterPotionByTypeRadioButtons;
+		return this.filterPotionByTypeRadioButtons;
 	}
 
 	public GameExtensionCheckBoxes getGameExtensionCheckBoxes() {
-		return gameExtensionCheckBoxes;
+		return this.gameExtensionCheckBoxes;
 	}
 
 	public LabeledTextField getMatchIngredientLabeledTextField() {
-		return matchIngredientLabeledTextField;
+		return this.matchIngredientLabeledTextField;
 	}
 
 	public LabeledTextField getMatchEffectLabeledTextField() {
-		return matchEffectLabeledTextField;
+		return this.matchEffectLabeledTextField;
 	}
 
 	public void reset() {
@@ -78,11 +78,11 @@ public class FilterPotionsView extends VBox {
 		// TODO - add the following:
 		// 1) Form for black list of ingredients?
 
-		ObservableList<Node> children = this.getChildren();
+		final ObservableList<Node> children = this.getChildren();
 		this.gameExtensionCheckBoxes = LayoutFactory.getInstance().createGameExtensionCheckBoxes();
-		VBox.setMargin(gameExtensionCheckBoxes,
+		VBox.setMargin(this.gameExtensionCheckBoxes,
 				new Insets(DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING));
-		children.add(gameExtensionCheckBoxes);
+		children.add(this.gameExtensionCheckBoxes);
 		this.harvestableOnlyCheckbox = new CheckBox();
 		this.harvestableOnlyCheckbox.setText(LabelConstants.HARVESTABLE);
 		this.harvestableOnlyCheckbox.setTooltip(new Tooltip(TooltipConstants.HARVESTABLE));
@@ -103,7 +103,7 @@ public class FilterPotionsView extends VBox {
 
 		this.matchIngredientLabeledTextField = LayoutFactory.getInstance().createLabeledTextField();
 		this.matchIngredientLabeledTextField.getLabel().setText(LabelConstants.MATCH_INGREDIENT);
-		TextField matchIngredientTextField = this.matchIngredientLabeledTextField.getTextField();
+		final TextField matchIngredientTextField = this.matchIngredientLabeledTextField.getTextField();
 		matchIngredientTextField.setText("");
 		matchIngredientTextField.setMaxWidth(100);
 		matchIngredientTextField.setTooltip(new Tooltip(TooltipConstants.MATCH_INGREDIENT));
@@ -113,7 +113,7 @@ public class FilterPotionsView extends VBox {
 
 		this.matchEffectLabeledTextField = LayoutFactory.getInstance().createLabeledTextField();
 		this.matchEffectLabeledTextField.getLabel().setText(LabelConstants.MATCH_EFFECT);
-		TextField matchEffectTextField = this.matchEffectLabeledTextField.getTextField();
+		final TextField matchEffectTextField = this.matchEffectLabeledTextField.getTextField();
 		matchEffectTextField.setText("");
 		matchEffectTextField.setMaxWidth(100);
 		matchEffectTextField.setTooltip(new Tooltip(TooltipConstants.MATCH_EFFECT));
@@ -121,7 +121,7 @@ public class FilterPotionsView extends VBox {
 				new Insets(DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING));
 		children.add(this.matchEffectLabeledTextField);
 
-		FilterPotionsActionButtons filterIngredientsButtonBox = LayoutFactory.getInstance()
+		final FilterPotionsActionButtons filterIngredientsButtonBox = LayoutFactory.getInstance()
 				.createFilterIngredientsActionButtons();
 		VBox.setMargin(filterIngredientsButtonBox,
 				new Insets(DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING, DEFAULT_PADDING));

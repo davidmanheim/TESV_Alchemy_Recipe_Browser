@@ -44,7 +44,8 @@ public class PotionEffect {
 	public PotionEffect(final Set<Ingredient> ingredients, final Effect baseEffect,
 			final CharacterConfig characterConfig) {
 		final Set<Ingredient> ingredientsWithEffect = ingredients.stream()
-				.filter(ingredient -> baseEffect.getIngredients().contains(ingredient)).collect(Collectors.toSet());
+				.filter(ingredient -> baseEffect.getIngredients().contains(ingredient))
+				.collect(Collectors.toSet());
 		this.ingredients = new HashSet<>(ingredientsWithEffect);
 		this.baseEffect = baseEffect;
 		this.characterConfig = characterConfig;
@@ -77,17 +78,24 @@ public class PotionEffect {
 	/** Sets the potion used by this class to calculate certain components. */
 	public void setPotionAndCalculateComponents(final Potion potion) {
 		this.potion = potion;
-		final Ingredient ingredientWithHighestCost = this.getIngredientWithHighestCost(this.ingredients, this.baseEffect);
-		this.potencyMultiplier = ingredientWithHighestCost.getMagnitudeMultiplierForEffect(this.baseEffect);
+		final Ingredient ingredientWithHighestCost = this
+				.getIngredientWithHighestCost(this.ingredients, this.baseEffect);
+		this.potencyMultiplier = ingredientWithHighestCost
+				.getMagnitudeMultiplierForEffect(this.baseEffect);
 		// TODO - clarify this code w/ comments, maybe refactor it.
 		this.magnitude = this.baseEffect.isTimeScaling() ? this.baseEffect.getBaseMag()
-				: (int) Math.round(ALCHEMY_INIT_MULTIPLIER * this.baseEffect.getBaseMag() * this.potencyMultiplier
+				: (int) Math.round(ALCHEMY_INIT_MULTIPLIER * this.baseEffect.getBaseMag()
+						* this.potencyMultiplier
 						* this.characterConfig.getAlchemySkillLevelMultiplier()
-						* this.characterConfig.getCharacterConfigMultiplier(this.potion, this.baseEffect));
+						* this.characterConfig.getCharacterConfigMultiplier(this.potion,
+								this.baseEffect));
 		this.duration = this.baseEffect.isTimeScaling()
-				? (int) Math.round(ALCHEMY_INIT_MULTIPLIER * this.baseEffect.getBaseDur() * this.potencyMultiplier
-						* this.characterConfig.getAlchemySkillLevelMultiplier()
-						* this.characterConfig.getCharacterConfigMultiplier(this.potion, this.baseEffect))
+				? (int) Math
+						.round(ALCHEMY_INIT_MULTIPLIER * this.baseEffect.getBaseDur()
+								* this.potencyMultiplier
+								* this.characterConfig.getAlchemySkillLevelMultiplier()
+								* this.characterConfig.getCharacterConfigMultiplier(
+										this.potion, this.baseEffect))
 				: this.baseEffect.getBaseDur();
 		this.value = this.computePotionEffectValue();
 	}
@@ -97,18 +105,22 @@ public class PotionEffect {
 		return this.baseEffect.getName();
 	}
 
-	private Ingredient getIngredientWithHighestCost(final Set<Ingredient> ingredients, final Effect baseEffect) {
+	private Ingredient getIngredientWithHighestCost(final Set<Ingredient> ingredients,
+			final Effect baseEffect) {
 		Ingredient highestCostIngredient = null;
 		double maxCostMultiplier = -1;
 		for (final Ingredient ingredient : ingredients) {
-			final double costMultiplierForEffect = ingredient.getCostMultiplierForEffect(baseEffect);
+			final double costMultiplierForEffect = ingredient
+					.getCostMultiplierForEffect(baseEffect);
 			if (costMultiplierForEffect > maxCostMultiplier) {
 				highestCostIngredient = ingredient;
 				maxCostMultiplier = costMultiplierForEffect;
-			} else if (costMultiplierForEffect - maxCostMultiplier < .01 && highestCostIngredient != null) {
+			} else if (costMultiplierForEffect - maxCostMultiplier < .01
+					&& highestCostIngredient != null) {
 				// In the event of a cost multiplier tie, the highest magnitude
 				// multiplier is used.
-				final double ingredientMagMultiplier = ingredient.getMagnitudeMultiplierForEffect(baseEffect);
+				final double ingredientMagMultiplier = ingredient
+						.getMagnitudeMultiplierForEffect(baseEffect);
 				final double currentHighestCostIngredientMagMultiplier = highestCostIngredient
 						.getMagnitudeMultiplierForEffect(baseEffect);
 				if (currentHighestCostIngredientMagMultiplier < ingredientMagMultiplier) {
@@ -124,7 +136,8 @@ public class PotionEffect {
 	private double computePotionEffectValue() {
 		final double baseCost = this.baseEffect.getBaseCost();
 		final double magnitudeMultiplier = Math.max(1, Math.pow(this.magnitude, 1.1));
-		final double durationMultiplier = this.duration == 0 ? 1 : Math.pow(this.duration / 10.0, 1.1);
+		final double durationMultiplier = this.duration == 0 ? 1
+				: Math.pow(this.duration / 10.0, 1.1);
 		LOG.debug(this.getIngredients() + " " + this.getBaseEffect());
 		LOG.debug(baseCost);
 		LOG.debug(magnitudeMultiplier);

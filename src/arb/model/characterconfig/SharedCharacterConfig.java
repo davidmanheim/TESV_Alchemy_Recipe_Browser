@@ -1,5 +1,6 @@
 package arb.model.characterconfig;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -34,12 +35,17 @@ public class SharedCharacterConfig {
 		this.skillLevel = mapping.containsKey(CharacterConfigKey.SKILL_LEVEL)
 				? Integer.parseInt(mapping.get(CharacterConfigKey.SKILL_LEVEL))
 				: DEFAULT_SKILL_LEVEL;
-		this.totalEnchantmentBonus = mapping.containsKey(CharacterConfigKey.TOTAL_ENCHANTMENT_BONUS)
-				? Double.parseDouble(mapping.get(CharacterConfigKey.TOTAL_ENCHANTMENT_BONUS)) / 100.0 + 1
-				: DEFAULT_ENCHANTMENT_BONUS;
-		this.isSeekerOfShadowsChecked = mapping.containsKey(CharacterConfigKey.SEEKER_OF_SHADOWS)
-				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.SEEKER_OF_SHADOWS))
-				: DEFAULT_SEEKER_OF_SHADOWS;
+		this.totalEnchantmentBonus = mapping
+				.containsKey(CharacterConfigKey.TOTAL_ENCHANTMENT_BONUS)
+						? Double.parseDouble(
+								mapping.get(CharacterConfigKey.TOTAL_ENCHANTMENT_BONUS))
+								/ 100.0 + 1
+						: DEFAULT_ENCHANTMENT_BONUS;
+		this.isSeekerOfShadowsChecked = mapping
+				.containsKey(CharacterConfigKey.SEEKER_OF_SHADOWS)
+						? Boolean.parseBoolean(
+								mapping.get(CharacterConfigKey.SEEKER_OF_SHADOWS))
+						: DEFAULT_SEEKER_OF_SHADOWS;
 	}
 
 	public Map<CharacterConfigKey, String> getStoreMapping() {
@@ -48,8 +54,15 @@ public class SharedCharacterConfig {
 
 	public void reset() {
 		this.skillLevel = DEFAULT_SKILL_LEVEL;
-		this.totalEnchantmentBonus = 1;
+		this.totalEnchantmentBonus = DEFAULT_ENCHANTMENT_BONUS;
 		this.isSeekerOfShadowsChecked = false;
+		this.mapping = new HashMap<>();
+		this.mapping.put(CharacterConfigKey.SKILL_LEVEL,
+				String.valueOf(DEFAULT_SKILL_LEVEL));
+		this.mapping.put(CharacterConfigKey.TOTAL_ENCHANTMENT_BONUS,
+				String.valueOf(DEFAULT_ENCHANTMENT_BONUS));
+		this.mapping.put(CharacterConfigKey.SEEKER_OF_SHADOWS,
+				String.valueOf(DEFAULT_SEEKER_OF_SHADOWS));
 	}
 
 	public int getSkillLevel() {
