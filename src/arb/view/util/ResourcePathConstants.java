@@ -20,7 +20,7 @@ public class ResourcePathConstants {
 
 	public static final String CLOSE_ICON = "/icons/close.png";
 
-	public static final String SAVED_CONFIG = "./ARB_Data/savedCharacterConfig.yml";
+	public static final String SAVED_CONFIG = "./ARB_Data/savedCharacterConfig.txt";
 
 	private ResourcePathConstants() {
 		// Private constructor to prevent instantiation.
