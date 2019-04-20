@@ -7,7 +7,6 @@ import org.apache.logging.log4j.Logger;
 
 import arb.factories.LayoutFactory;
 import arb.factories.MenuFactory;
-import arb.util.LabelConstants;
 import arb.util.ResourcePathConstants;
 import arb.util.WindowHelper;
 import arb.view.MainApplicationView;
@@ -69,7 +68,6 @@ public class ARB extends Application {
 		ViewController.getInstance().setStage(stage);
 		stage.getIcons().add(new Image(this.getClass().getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
 		stage.initStyle(StageStyle.TRANSPARENT);
-		stage.setTitle(LabelConstants.APPLICATION_TITLE);
 		stage.setScene(scene);
 		WindowHelper.addResizeAndDragListener(stage, root);
 		// Note - the order is important here. first, the stage is shown while not

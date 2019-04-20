@@ -1,5 +1,9 @@
 package arb.view.menu;
 
+import arb.util.LabelConstants;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 
 /**
@@ -17,5 +21,10 @@ public class ApplicationMenuSpacer extends Region {
 	private void configure() {
 		this.setMaxHeight(50);
 		this.getStyleClass().add(MENU_BAR_CSS_CLASS);
+		final Label title = new Label(LabelConstants.APPLICATION_TITLE);
+		// TODO - centered would be nice.
+		title.setAlignment(Pos.CENTER);
+		title.setPadding(new Insets(10, 0, 0, 0));
+		this.getChildren().add(title);
 	}
 }
