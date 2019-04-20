@@ -77,7 +77,7 @@
 }
 
 .menu-bar {
-	-fx-background-color: linear-gradient(to bottom, -arb-color-pebble, -arb-color-pearl);
+	-fx-background-color: transparent;
 }
 
 .radio-button>.radio {
@@ -220,7 +220,9 @@
     Defines the rectangle responsible for the shadow
 */
 .decoration-shadow{
-    -fx-fill: black;
-    -fx-background-color: transparent;
-    -fx-stroke-width: 0;
+    -fx-fill: linear-gradient(to bottom, -arb-color-pebble, -arb-color-pearl);
+    /*radial-gradient(focus-angle 45deg, focus-distance 20%, center 25% 25%, radius 50%, reflect, #eeeeee88, #aaaaaa88 75%, gray);*/
+	-fx-stroke-width: 0;
+	-fx-arc-width:20px;
+	-fx-arc-height:20px;
 }

@@ -7,7 +7,7 @@ import javafx.scene.layout.Region;
  * ApplicationTitleBar to have a left and a right menu.
  */
 public class ApplicationMenuSpacer extends Region {
-	
+
 	private static final String MENU_BAR_CSS_CLASS = "menu-bar";
 
 	public ApplicationMenuSpacer() {

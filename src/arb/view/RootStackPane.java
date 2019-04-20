@@ -3,6 +3,7 @@ package arb.view;
 import arb.factories.LayoutFactory;
 import arb.view.roothelper.ShadowRectangle;
 import javafx.geometry.Bounds;
+import javafx.geometry.Insets;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
@@ -19,6 +20,7 @@ public class RootStackPane extends StackPane {
 
 	public RootStackPane(Region applicationView) {
 		this.applicationView = applicationView;
+		applicationView.setPadding(new Insets(10));
 		this.shadowRectangle = LayoutFactory.getInstance().createShadowRectangle();
 		this.setStyle("-fx-background-color:transparent;");
 		this.getChildren().addAll(this.shadowRectangle, applicationView);

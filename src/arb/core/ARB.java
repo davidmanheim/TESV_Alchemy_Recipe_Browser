@@ -14,10 +14,10 @@ import arb.view.MainApplicationView;
 import arb.view.RootStackPane;
 import arb.view.menu.ApplicationTitleBar;
 import javafx.application.Application;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -40,8 +40,10 @@ public class ARB extends Application {
 
 	/**
 	 * Creates and returns a Scene, using the given Parent object as a root element.
+	 *
+	 * @param stage
 	 */
-	private Scene createScene(final Parent root) {
+	private Scene createScene(final Region root) {
 		final Scene scene = new Scene(root);
 		final String applicationCSS = this.getClass().getResource(ResourcePathConstants.APPLICATION_CSS)
 				.toExternalForm();
