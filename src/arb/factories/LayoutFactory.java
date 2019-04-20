@@ -170,7 +170,7 @@ public class LayoutFactory {
 		helpScene.getStylesheets().add(ResourcePathConstants.APPLICATION_CSS);
 		helpScene.setFill(Color.TRANSPARENT);
 		helpStage.setScene(helpScene);
-		WindowHelper.addResizeListener(helpStage);
+		WindowHelper.addResizeAndDragListener(helpStage, helpView);
 		helpStage.show();
 	}
 

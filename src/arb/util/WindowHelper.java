@@ -1,48 +1,27 @@
 package arb.util;
 
 import arb.core.ModelController;
-import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Cursor;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 /**
- * This class provides methods to allow the resizing of an undecorated window.
+ * This class provides methods to allow the resizing and dragging of an
+ * undecorated window.
  */
 public class WindowHelper {
 
-	public static void addResizeListener(final Stage stage) {
+	public static void addResizeAndDragListener(final Stage stage, Region applicationView) {
 		final ResizeListener resizeListener = new ResizeListener(stage);
-		final Scene scene = stage.getScene();
-		scene.addEventHandler(MouseEvent.MOUSE_MOVED, resizeListener);
-		scene.addEventHandler(MouseEvent.MOUSE_PRESSED, resizeListener);
-		scene.addEventHandler(MouseEvent.MOUSE_DRAGGED, resizeListener);
-		scene.addEventHandler(MouseEvent.MOUSE_EXITED, resizeListener);
-		scene.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, resizeListener);
-		final ObservableList<Node> children = scene.getRoot().getChildrenUnmodifiable();
-		for (final Node child : children) {
-			addListenerDeeply(child, resizeListener);
-		}
-	}
-
-	private static void addListenerDeeply(final Node node, final EventHandler<MouseEvent> listener) {
-		node.addEventHandler(MouseEvent.MOUSE_MOVED, listener);
-		node.addEventHandler(MouseEvent.MOUSE_PRESSED, listener);
-		node.addEventHandler(MouseEvent.MOUSE_DRAGGED, listener);
-		node.addEventHandler(MouseEvent.MOUSE_EXITED, listener);
-		node.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, listener);
-		if (node instanceof Parent) {
-			final Parent parent = (Parent) node;
-			final ObservableList<Node> children = parent.getChildrenUnmodifiable();
-			for (final Node child : children) {
-				addListenerDeeply(child, listener);
-			}
-		}
+		applicationView.addEventHandler(MouseEvent.MOUSE_MOVED, resizeListener);
+		applicationView.addEventHandler(MouseEvent.MOUSE_PRESSED, resizeListener);
+		applicationView.addEventHandler(MouseEvent.MOUSE_DRAGGED, resizeListener);
+		applicationView.addEventHandler(MouseEvent.MOUSE_EXITED, resizeListener);
+		applicationView.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, resizeListener);
 	}
 
 	private static class ResizeListener implements EventHandler<MouseEvent> {
@@ -57,7 +36,7 @@ public class WindowHelper {
 
 		private Cursor cursorEvent = Cursor.DEFAULT;
 
-		private static final int BORDER = 4;
+		private static final int BORDER = 24;
 
 		private double xOffset;
 

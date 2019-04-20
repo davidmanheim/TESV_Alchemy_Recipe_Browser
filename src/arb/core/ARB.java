@@ -32,7 +32,7 @@ public class ARB extends Application {
 		final BorderPane root = this.createRootPane(stage);
 		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(root);
 		final Scene scene = this.createScene(rootStackPane);
-		this.configureStage(stage, scene);
+		this.configureStage(stage, scene, root);
 		// These messages are just to separate executions if a log file gets reused.
 		LOG.info("==============================================");
 		LOG.info("Application started successfully.");
@@ -65,13 +65,13 @@ public class ARB extends Application {
 		return root;
 	}
 
-	private void configureStage(final Stage stage, final Scene scene) {
+	private void configureStage(final Stage stage, final Scene scene, Region root) {
 		ViewController.getInstance().setStage(stage);
 		stage.getIcons().add(new Image(this.getClass().getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
 		stage.initStyle(StageStyle.TRANSPARENT);
 		stage.setTitle(LabelConstants.APPLICATION_TITLE);
 		stage.setScene(scene);
-		WindowHelper.addResizeListener(stage);
+		WindowHelper.addResizeAndDragListener(stage, root);
 		// Note - the order is important here. first, the stage is shown while not
 		// maximized. Then, the model controller is initialized to set the default
 		// window state to maximized. On entering this state, the current window
