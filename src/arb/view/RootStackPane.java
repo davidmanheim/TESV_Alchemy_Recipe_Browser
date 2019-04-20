@@ -7,8 +7,14 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
-/** This class is the top level root element of any stage. */
+/**
+ * This class is intended to be the top level root element of any stage created
+ * in the application. It defines a shadowed rectangle around the window, as
+ * well as some CSS style-able padding area.
+ */
 public class RootStackPane extends StackPane {
+
+	private static final String ROOT_STACK_PANE_CSS_CLASS = "arb-root-stack-pane";
 
 	private static final int ROUNDED_DELTA = 0;
 
@@ -22,7 +28,7 @@ public class RootStackPane extends StackPane {
 		this.applicationView = applicationView;
 		applicationView.setPadding(new Insets(10));
 		this.shadowRectangle = LayoutFactory.getInstance().createShadowRectangle();
-		this.setStyle("-fx-background-color:transparent;");
+		this.getStyleClass().add(ROOT_STACK_PANE_CSS_CLASS);
 		this.getChildren().addAll(this.shadowRectangle, applicationView);
 	}
 

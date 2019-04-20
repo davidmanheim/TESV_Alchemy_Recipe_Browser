@@ -34,7 +34,7 @@ public class BaseGameCharacterConfig {
 	}
 
 	public double getPhysicianMultiplier(final Effect effect) {
-		return Arrays.asList("Restore Health", "Restore Magicka", "Restore Stamina").contains(effect)
+		return Arrays.asList("Restore Health", "Restore Magicka", "Restore Stamina").contains(effect.getName())
 				&& this.isPhysicianChecked ? 1.25 : 1;
 	}
 

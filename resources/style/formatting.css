@@ -27,6 +27,10 @@
 	-fx-cell-focus-inner-border: -arb-color-stone;
 }
 
+.arb-root-stack-pane {
+	-fx-background-color: transparent;
+}
+
 .arb-help-view {
 	-fx-background-color: red;
 }

@@ -45,17 +45,25 @@ public abstract class ApplicationWindowState {
 	}
 
 	protected void restoreSavedBounds(final Stage stage) {
-		stage.setX(this.savedBounds.getMinX());
-		stage.setY(this.savedBounds.getMinY());
-		stage.setWidth(this.savedBounds.getWidth());
-		stage.setHeight(this.savedBounds.getHeight());
-		this.savedBounds = null;
+		if (this.savedBounds == null) {
+			stage.centerOnScreen();
+		} else {
+			stage.setX(this.savedBounds.getMinX());
+			stage.setY(this.savedBounds.getMinY());
+			stage.setWidth(this.savedBounds.getWidth());
+			stage.setHeight(this.savedBounds.getHeight());
+			this.savedBounds = null;
+		}
 	}
 
 	protected void restoreSavedSize(final Stage stage) {
-		stage.setWidth(this.savedBounds.getWidth());
-		stage.setHeight(this.savedBounds.getHeight());
-		this.savedBounds = null;
+		if (this.savedBounds == null) {
+			stage.centerOnScreen();
+		} else {
+			stage.setWidth(this.savedBounds.getWidth());
+			stage.setHeight(this.savedBounds.getHeight());
+			this.savedBounds = null;
+		}
 	}
 
 	protected void setIconColor() {

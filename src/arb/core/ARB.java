@@ -32,15 +32,13 @@ public class ARB extends Application {
 		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(root);
 		final Scene scene = this.createScene(rootStackPane);
 		this.configureStage(stage, scene, root);
-		// These messages are just to separate executions if a log file gets reused.
+		// These messages are just to separate executions if a log file gets re-used.
 		LOG.info("==============================================");
 		LOG.info("Application started successfully.");
 	}
 
 	/**
 	 * Creates and returns a Scene, using the given Parent object as a root element.
-	 *
-	 * @param stage
 	 */
 	private Scene createScene(final Region root) {
 		final Scene scene = new Scene(root);
@@ -69,16 +67,16 @@ public class ARB extends Application {
 		stage.getIcons().add(new Image(this.getClass().getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
 		stage.initStyle(StageStyle.TRANSPARENT);
 		stage.setScene(scene);
-		WindowHelper.addResizeAndDragListener(stage, root);
 		// Note - the order is important here. first, the stage is shown while not
 		// maximized. Then, the model controller is initialized to set the default
 		// window state to maximized. On entering this state, the current window
 		// bounds are set to restore later. If the window is already maximized, the
 		// system gets out of sync. Then, the stage is maximized to put the model
 		// and view in sync.
-		stage.show();
-		ModelController.getInstance();
 		stage.setMaximized(true);
+		stage.show();
+		WindowHelper.addResizeAndDragListener(stage, root);
+		ModelController.getInstance();
 	}
 
 	public static void main(final String[] args) {
