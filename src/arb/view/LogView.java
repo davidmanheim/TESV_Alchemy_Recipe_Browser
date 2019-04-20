@@ -1,6 +1,6 @@
 package arb.view;
 
-import arb.util.LabelConstants;
+import arb.view.util.LabelConstants;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 

@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 
 import arb.factories.LayoutFactory;
 import arb.factories.MenuFactory;
-import arb.util.ResourcePathConstants;
-import arb.util.WindowHelper;
 import arb.view.MainApplicationView;
 import arb.view.RootStackPane;
 import arb.view.menu.ApplicationTitleBar;
+import arb.view.util.ResourcePathConstants;
+import arb.view.util.WindowHelper;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;

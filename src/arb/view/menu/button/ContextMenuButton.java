@@ -1,8 +1,8 @@
 package arb.view.menu.button;
 
 import arb.factories.MenuFactory;
-import arb.util.ResourcePathConstants;
 import arb.view.menu.ActionMenu;
+import arb.view.util.ResourcePathConstants;
 import javafx.geometry.Side;
 
 public class ContextMenuButton extends AbstractMenuButton {

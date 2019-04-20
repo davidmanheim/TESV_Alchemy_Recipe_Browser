@@ -1,6 +1,7 @@
 package arb.model.characterconfig;
 
 import java.util.Arrays;
+import java.util.Map;
 
 import arb.model.entity.Effect;
 
@@ -10,6 +11,10 @@ import arb.model.entity.Effect;
  */
 public class BaseGameCharacterConfig {
 
+	private static final int DEFAULT_ALCHEMIST = 0;
+
+	private static final boolean DEFAULT_CHECK_BOX = false;
+
 	private int alchemistLevel;
 
 	private boolean isPhysicianChecked;
@@ -18,15 +23,37 @@ public class BaseGameCharacterConfig {
 
 	private boolean isPoisonerChecked;
 
+	private Map<CharacterConfigKey, String> mapping;
+
 	public BaseGameCharacterConfig() {
 		this.reset();
 	}
 
+	public void update(Map<CharacterConfigKey, String> mapping) {
+		this.mapping = mapping;
+		this.alchemistLevel = mapping.containsKey(CharacterConfigKey.ALCHEMY_MASTERY)
+				? Integer.parseInt(mapping.get(CharacterConfigKey.ALCHEMY_MASTERY))
+				: DEFAULT_ALCHEMIST;
+		this.isPhysicianChecked = mapping.containsKey(CharacterConfigKey.PHYSICIAN_BASE_GAME)
+				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.PHYSICIAN_BASE_GAME))
+				: DEFAULT_CHECK_BOX;
+		this.isBenefactorChecked = mapping.containsKey(CharacterConfigKey.ADVANCED_LAB)
+				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.ADVANCED_LAB))
+				: DEFAULT_CHECK_BOX;
+		this.isPoisonerChecked = mapping.containsKey(CharacterConfigKey.POISONER_BASE_GAME)
+				? Boolean.parseBoolean(mapping.get(CharacterConfigKey.POISONER_BASE_GAME))
+				: DEFAULT_CHECK_BOX;
+	}
+
+	public Map<CharacterConfigKey, String> getStoreMapping() {
+		return this.mapping;
+	}
+
 	public void reset() {
-		this.alchemistLevel = 0;
-		this.isPhysicianChecked = false;
-		this.isBenefactorChecked = false;
-		this.isPoisonerChecked = false;
+		this.alchemistLevel = DEFAULT_ALCHEMIST;
+		this.isPhysicianChecked = DEFAULT_CHECK_BOX;
+		this.isBenefactorChecked = DEFAULT_CHECK_BOX;
+		this.isPoisonerChecked = DEFAULT_CHECK_BOX;
 	}
 
 	public double getAlchemistMultiplier() {

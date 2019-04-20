@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 import arb.factories.ResultCellFactory;
 import arb.model.computation.PotionResultWrapper;
-import arb.util.LabelConstants;
+import arb.view.util.LabelConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Label;

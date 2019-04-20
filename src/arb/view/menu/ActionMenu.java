@@ -3,7 +3,7 @@ package arb.view.menu;
 import arb.core.ModelController;
 import arb.core.ViewController;
 import arb.factories.LayoutFactory;
-import arb.util.LabelConstants;
+import arb.view.util.LabelConstants;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
@@ -49,7 +49,7 @@ public class ActionMenu extends ContextMenu {
 		final MenuItem close = new MenuItem(LabelConstants.CLOSE);
 		close.setAccelerator(new KeyCodeCombination(KeyCode.W, KeyCombination.SHORTCUT_DOWN));
 		close.setOnAction(event -> ModelController.getInstance().transitionToClosedState());
-		this.getItems().addAll(helpMenuItem, new SeparatorMenuItem(), new SeparatorMenuItem(), minimizeMenuItem,
-				maximizeMenuItem, new SeparatorMenuItem(), close);
+		this.getItems().addAll(helpMenuItem, new SeparatorMenuItem(), saveCharacterMenuItem, new SeparatorMenuItem(),
+				minimizeMenuItem, maximizeMenuItem, new SeparatorMenuItem(), close);
 	}
 }

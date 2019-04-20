@@ -3,8 +3,8 @@ package arb.state.model;
 import arb.core.ViewController;
 import arb.factories.ModelFactory;
 import arb.model.computation.PotionResultWrapper;
-import arb.util.LabelConstants;
 import arb.view.filter.FilterPotionsView;
+import arb.view.util.LabelConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

@@ -1,8 +1,8 @@
 package arb.view.filter;
 
 import arb.core.ModelController;
-import arb.util.LabelConstants;
-import arb.util.TooltipConstants;
+import arb.view.util.LabelConstants;
+import arb.view.util.TooltipConstants;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

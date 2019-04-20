@@ -1,8 +1,6 @@
 package arb.factories;
 
 import arb.core.ViewController;
-import arb.util.ResourcePathConstants;
-import arb.util.WindowHelper;
 import arb.view.HelpView;
 import arb.view.LogView;
 import arb.view.MainApplicationView;
@@ -23,7 +21,9 @@ import arb.view.filter.FilterPotionsActionButtons;
 import arb.view.filter.FilterPotionsView;
 import arb.view.filter.GameExtensionCheckBoxes;
 import arb.view.result.ResultTableView;
-import arb.view.roothelper.ShadowRectangle;
+import arb.view.util.ResourcePathConstants;
+import arb.view.util.ShadowRectangle;
+import arb.view.util.WindowHelper;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
@@ -35,6 +35,10 @@ import javafx.stage.StageStyle;
  * application.
  */
 public class LayoutFactory {
+
+	private static final int HELP_STAGE_HEIGHT = 600;
+
+	private static final int HELP_STAGE_WIDTH = 700;
 
 	private static LayoutFactory layoutFactoryInstance;
 
@@ -157,21 +161,25 @@ public class LayoutFactory {
 		}
 	}
 
+	/** Creates a new stage, scene, and then a HelpView, which is nested inside. */
 	private void createNewHelpView() {
-		// TODO - maybe refactor this into some new classes?
-		final Stage helpStage = new Stage();
-		helpStage.setOnCloseRequest(event -> ViewController.getInstance().setHelpStage(null));
-		helpStage.initStyle(StageStyle.TRANSPARENT);
-		helpStage.centerOnScreen();
+		final Stage helpStage = this.createHelpStage();
 		final HelpView helpView = new HelpView(helpStage);
-		ViewController.getInstance().setHelpStage(helpStage);
 		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(helpView);
-		final Scene helpScene = new Scene(rootStackPane, 700, 600);
+		final Scene helpScene = new Scene(rootStackPane, HELP_STAGE_WIDTH, HELP_STAGE_HEIGHT);
 		helpScene.getStylesheets().add(ResourcePathConstants.APPLICATION_CSS);
 		helpScene.setFill(Color.TRANSPARENT);
 		helpStage.setScene(helpScene);
 		WindowHelper.addResizeAndDragListener(helpStage, helpView);
 		helpStage.show();
+	}
+
+	private Stage createHelpStage() {
+		final Stage helpStage = new Stage();
+		helpStage.initStyle(StageStyle.TRANSPARENT);
+		helpStage.centerOnScreen();
+		ViewController.getInstance().setHelpStage(helpStage);
+		return helpStage;
 	}
 
 	private LayoutFactory() {

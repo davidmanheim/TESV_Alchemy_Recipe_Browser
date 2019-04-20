@@ -1,9 +1,9 @@
 package arb.view.filter;
 
 import arb.factories.LayoutFactory;
-import arb.util.LabelConstants;
-import arb.util.TooltipConstants;
 import arb.view.control.LabeledTextField;
+import arb.view.util.LabelConstants;
+import arb.view.util.TooltipConstants;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

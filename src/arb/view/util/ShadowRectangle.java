@@ -1,4 +1,4 @@
-package arb.view.roothelper;
+package arb.view.util;
 
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Bounds;

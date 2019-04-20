@@ -2,10 +2,10 @@ package arb.view;
 
 import arb.core.ViewController;
 import arb.factories.MenuFactory;
-import arb.util.LabelConstants;
 import arb.view.menu.ApplicationMenuSpacer;
 import arb.view.menu.button.AbstractMenuButton;
 import arb.view.menu.button.ApplicationMenuButtonType;
+import arb.view.util.LabelConstants;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;

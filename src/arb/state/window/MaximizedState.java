@@ -1,7 +1,7 @@
 package arb.state.window;
 
 import arb.core.ViewController;
-import arb.util.ResourcePathConstants;
+import arb.view.util.ResourcePathConstants;
 import javafx.collections.ObservableList;
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Rectangle2D;

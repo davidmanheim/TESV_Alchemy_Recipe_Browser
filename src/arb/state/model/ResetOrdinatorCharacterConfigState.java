@@ -2,8 +2,8 @@ package arb.state.model;
 
 import arb.core.ViewController;
 import arb.model.computation.PotionResultWrapper;
-import arb.util.LabelConstants;
 import arb.view.character.OrdinatorCharacterConfigView;
+import arb.view.util.LabelConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

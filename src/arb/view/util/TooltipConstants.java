@@ -1,4 +1,4 @@
-package arb.util;
+package arb.view.util;
 
 /**
  * This class contains constants that are shown as tool tips in the application.

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import arb.factories.LayoutFactory;
 import arb.factories.ModelRegistry;
-import arb.util.TooltipConstants;
+import arb.view.util.TooltipConstants;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;

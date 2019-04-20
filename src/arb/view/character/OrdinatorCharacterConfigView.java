@@ -4,10 +4,10 @@ import java.util.function.UnaryOperator;
 
 import arb.core.ModelController;
 import arb.factories.LayoutFactory;
-import arb.util.LabelConstants;
-import arb.util.TooltipConstants;
 import arb.view.control.LabeledComboBox;
 import arb.view.control.LabeledTextField;
+import arb.view.util.LabelConstants;
+import arb.view.util.TooltipConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

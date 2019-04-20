@@ -1,7 +1,7 @@
 package arb.view;
 
 import arb.factories.LayoutFactory;
-import arb.view.roothelper.ShadowRectangle;
+import arb.view.util.ShadowRectangle;
 import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
 import javafx.scene.layout.Region;

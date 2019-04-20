@@ -9,6 +9,7 @@ import arb.state.model.ResetFilterState;
 import arb.state.model.ResetOrdinatorCharacterConfigState;
 import arb.state.model.ResetSearchState;
 import arb.state.model.ResetSharedCharacterConfigState;
+import arb.state.model.SavedCharacterConfigState;
 import arb.state.window.ApplicationWindowState;
 import arb.state.window.ClosedState;
 import arb.state.window.MaximizedState;
@@ -73,6 +74,10 @@ public class ModelController {
 		this.applicationModelState = new ResetSharedCharacterConfigState(this.applicationModelState);
 	}
 
+	public void transitionToSavedCharacterState() {
+		this.applicationModelState = new SavedCharacterConfigState(this.applicationModelState);
+	}
+
 	public void transitionToMinimizedState() {
 		this.applicationWindowState = new MinimizedState(this.applicationWindowState);
 	}
@@ -91,10 +96,6 @@ public class ModelController {
 
 	public void transitionToClosedState() {
 		this.applicationWindowState = new ClosedState(this.applicationWindowState);
-	}
-
-	public void transitionToSavedCharacterState() {
-		// TODO - implement
 	}
 
 }

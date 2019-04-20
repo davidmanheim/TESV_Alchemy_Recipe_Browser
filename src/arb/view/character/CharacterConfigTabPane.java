@@ -1,8 +1,8 @@
 package arb.view.character;
 
 import arb.factories.LayoutFactory;
-import arb.util.LabelConstants;
-import arb.util.TooltipConstants;
+import arb.view.util.LabelConstants;
+import arb.view.util.TooltipConstants;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;

@@ -1,4 +1,4 @@
-package arb.util;
+package arb.view.util;
 
 import arb.model.entity.GameExtension;
 

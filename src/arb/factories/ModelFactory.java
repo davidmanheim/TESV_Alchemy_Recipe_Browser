@@ -96,6 +96,18 @@ public class ModelFactory {
 		return new MatchEffectFilter(contentToMatch);
 	}
 
+	public BaseGameCharacterConfig createBaseGameCharacterConfig() {
+		return new BaseGameCharacterConfig();
+	}
+
+	public OrdinatorCharacterConfig createOrdinatorCharacterConfig() {
+		return new OrdinatorCharacterConfig();
+	}
+
+	public SharedCharacterConfig createSharedCharacterConfig() {
+		return new SharedCharacterConfig();
+	}
+
 	// Use ModelRegistry to get a reference to this; only one needs to be created.
 	protected Ingredients createIngredients(final Set<Ingredient> createdIngredients) {
 		return new Ingredients(createdIngredients);
@@ -108,18 +120,6 @@ public class ModelFactory {
 
 	private ModelFactory() {
 		// Private constructor to prevent external instantiation.
-	}
-
-	public BaseGameCharacterConfig createBaseGameCharacterConfig() {
-		return new BaseGameCharacterConfig();
-	}
-
-	public OrdinatorCharacterConfig createOrdinatorCharacterConfig() {
-		return new OrdinatorCharacterConfig();
-	}
-
-	public SharedCharacterConfig createSharedCharacterConfig() {
-		return new SharedCharacterConfig();
 	}
 
 }

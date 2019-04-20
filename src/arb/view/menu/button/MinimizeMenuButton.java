@@ -1,7 +1,7 @@
 package arb.view.menu.button;
 
 import arb.core.ModelController;
-import arb.util.ResourcePathConstants;
+import arb.view.util.ResourcePathConstants;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 

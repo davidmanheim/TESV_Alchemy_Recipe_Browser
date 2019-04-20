@@ -1,6 +1,6 @@
 package arb.view.menu;
 
-import arb.util.LabelConstants;
+import arb.view.util.LabelConstants;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
