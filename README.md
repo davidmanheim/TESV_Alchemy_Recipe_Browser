@@ -10,10 +10,10 @@ As the description suggests, this is a standalone Java application for examining
   (A more detailed overview of the application is available in the context menu -> Help)
   
 ### Application setup for end users:
-  1) Download this repository <TODO - is it possible to include built JAR for download?>
-  2) Extract to desired location on your computer.
-  3) In ..\TESV_Alchemy_Recipe_Browser\ARB_Data\binaries\, find FuturaCondensedBQ-Medium.otf and run it. This will download the application's font to your computer. This step is technically optional, but the style for the application is aligned with this font's size, so other fonts might not work 100% correctly.
-  4) In ..\TESV_Alchemy_Recipe_Browser\ARB_Data\binaries\, find and execute TESV_Alchemy_Recipe_Browser.jar <TODO - can this be an .EXE?>. This should launch the base application.
+  1) In ..\TESV_Alchemy_Recipe_Browser\ARB_Data\binaries\, find and download TESV_Alchemy_Recipe_Browser-X.X.jar, where the X's are the latest version number available. Also download FuturaCondensedBQ-Medium.otf from this directory.
+  2) Save to desired location on your computer. when run, the application (the .jar file) will create a folder called ARB_Data in the same folder. This folder is used to store logs, as well as read and write to a save file. _You will need to grant the necessary permissions to this application or your user account, depending on your operating system._
+  3) Find FuturaCondensedBQ-Medium.otf and run it. This will download the application's font to your computer. This step is technically optional, but the style for the application is aligned with this font's size, so other fonts might not work 100% correctly.
+  4) Execute TESV_Alchemy_Recipe_Browser.jar. This should launch the base application. _Again, you might need to modify permissions of your user profile to allow execution of this program._
   5) Within the application open the context menu -> Help for more detailed usage instructions.
   
 ### Application setup for developers:
