@@ -184,5 +184,4 @@ public abstract class ApplicationModelState {
 				seekerOfShadowsSelected.toString());
 		return sharedCharacterConfigMapping;
 	}
-
 }

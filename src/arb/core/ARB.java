@@ -72,12 +72,6 @@ public class ARB extends Application {
 		stage.initStyle(StageStyle.TRANSPARENT);
 		stage.setScene(scene);
 		stage.setMinHeight(600);
-		// Note - the order is important here. first, the stage is shown while not
-		// maximized. Then, the model controller is initialized to set the default
-		// window state to maximized. On entering this state, the current window
-		// bounds are set to restore later. If the window is already maximized, the
-		// system gets out of sync. Then, the stage is maximized to put the model
-		// and view in sync.
 		stage.setMaximized(true);
 		stage.show();
 		WindowHelper.addResizeAndDragListener(stage, root);

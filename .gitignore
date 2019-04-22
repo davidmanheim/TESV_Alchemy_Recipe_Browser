@@ -2,5 +2,6 @@
 bin/
 .project
 .classpath
+ARB_Data/savedCharacterConfig.txt
 ARB_Data/logs
 ARB_Data/ARB_Data
