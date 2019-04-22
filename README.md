@@ -1,7 +1,7 @@
 # TESV_Alchemy_Recipe_Browser
 A standalone JavaFX application for examining alchemy recipes in TESV: Skyrim
 
-### Licensing / Other:
+### Licensing + Usage:
 
 Short version:  You are free to distribute, use, or add onto this work. Should you add onto it, I would love to receive feedback + suggestions for integrating it into this repository. However, in all circumstances, I insist to be credited for components of the project which I implemented (i.e. the version in this repository). Furthermore, in no case shall another person use this work to produce a profit, whether through direct utilization of this software or an extension or derivation of it.
 
@@ -31,7 +31,7 @@ As the description suggests, this is a standalone Java application for examining
   5) After a clean, you should be able to run the base class "ARB.java" from within Eclipse.
   
   
-### Copyright:
+### Copyright Notice:
   
 Copyright © jhayn94. All rights reserved.
 
