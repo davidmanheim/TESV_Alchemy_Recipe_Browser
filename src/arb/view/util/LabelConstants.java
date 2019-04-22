@@ -56,7 +56,8 @@ public class LabelConstants {
 
 	public static final String ADVANCED_LAB = "Advanced Lab".toUpperCase();
 
-	public static final String THAT_WHICH_DOES_NOT_KILL_YOU = "That Which Does Not Kill You...".toUpperCase();
+	public static final String THAT_WHICH_DOES_NOT_KILL_YOU = "That Which Does Not Kill You..."
+			.toUpperCase();
 
 	public static final String SKILL_LEVEL = "Alchemy Level".toUpperCase();
 
@@ -103,43 +104,69 @@ public class LabelConstants {
 	public static final String POTENCY = "Potency";
 
 	public static final String HELP_MESSAGE = "Welcome to the Skyrim Alchemy Recipe Browser. To use "
-			+ "the application, follow the below guidelines:\n\nCHARACTER TAB:\n" + BULLET_POINT
-			+ "Define your character's stats in the '" + CHARACTER + "' tab.\n" + BULLET_POINT_2
-			+ "If you change your character configration after searching, you must re-execute the search.\n" + BULLET_POINT
+			+ "the application, follow the below guidelines:\n\nCHARACTER TAB:\n"
+			+ BULLET_POINT + "Define your character's stats in the '" + CHARACTER
+			+ "' tab.\n" + BULLET_POINT_2
+			+ "If you change your character configration after searching, you must re-execute the search.\n"
+			+ BULLET_POINT
 			+ "The 3 tabs correspond to different components of the game. The Base game and Ordinator tabs should not be used together, "
-			+ "as this will make calculated strength and value of potions incorrect.\n" + BULLET_POINT_2
-			+ "Base game corresponds to unmodded Skyrim.\n" + BULLET_POINT_2
-			+ "Ordinator represents the Ordinator perk overhaul mod.\n" + BULLET_POINT_2
+			+ "as this will make calculated strength and value of potions incorrect.\n"
+			+ BULLET_POINT_2 + "Base game corresponds to unmodded Skyrim.\n"
+			+ BULLET_POINT_2 + "Ordinator represents the Ordinator perk overhaul mod.\n"
+			+ BULLET_POINT_2
 			+ "Shared corresponds to aspects of the game which are always relevant, regardless of mods (or their absence).\n\nSEARCH TAB:\n"
-			+ BULLET_POINT + "Select desired ingredients in the '" + EFFECTS + "' sub-tab.\n" + BULLET_POINT_2
-			+ HELP_MESSAGE_COMPONENT + SEARCH + "' button to view all matching potions.\n" + BULLET_POINT_2
+			+ BULLET_POINT + "Select desired ingredients in the '" + EFFECTS
+			+ "' sub-tab.\n" + BULLET_POINT_2 + HELP_MESSAGE_COMPONENT + SEARCH
+			+ "' button to view all matching potions.\n" + BULLET_POINT_2
 			+ HELP_MESSAGE_COMPONENT + RESET + "' button on the '" + EFFECTS
-			+ "' sub-tab to clear the search and reset the effects view.\n" + BULLET_POINT + "Select desired filters in the '"
-			+ FILTER_POTIONS + "' sub-tab.\n" + BULLET_POINT_2 + HELP_MESSAGE_COMPONENT + FILTER
-			+ "' button to reduce the table view to potions matching the defined criteria.\n" + BULLET_POINT_2
-			+ HELP_MESSAGE_COMPONENT + RESET + "' button on the '" + FILTER
-			+ "' tab to clear the filters and restore the original search.\n\nOTHER:\n" + BULLET_POINT
-			+ "Use the save button in the context menu to store the current character configuration.\n" + BULLET_POINT_2
+			+ "' sub-tab to clear the search and reset the effects view.\n" + BULLET_POINT
+			+ "Select desired filters in the '" + FILTER_POTIONS + "' sub-tab.\n"
+			+ BULLET_POINT_2 + HELP_MESSAGE_COMPONENT + FILTER
+			+ "' button to reduce the table view to potions matching the defined criteria.\n"
+			+ BULLET_POINT_2 + HELP_MESSAGE_COMPONENT + RESET + "' button on the '"
+			+ FILTER
+			+ "' tab to clear the filters and restore the original search.\n\nOTHER:\n"
+			+ BULLET_POINT
+			+ "Use the save button in the context menu to store the current character configuration.\n"
+			+ BULLET_POINT_2
 			+ "Only one configuration can be stored, and this configuration will be automatically loaded when the application starts.\n"
-			+ BULLET_POINT + "If you are unsure of what something does, hover over to it to see a more descriptive tooltip.";
+			+ BULLET_POINT
+			+ "If you are unsure of what something does, hover over to it to see a more descriptive tooltip.";
 
 	public static final String COMPUTING = BULLET_POINT
 			+ "Computing the result. This may take up to 5 seconds if you ran a search with no effect requirements.";
 
-	public static final String SUGGEST_CLEAR_FILTERS_MESSAGE = BULLET_POINT + "Try resetting the '" + FILTER + "' tab.";
+	public static final String SUGGEST_CLEAR_FILTERS_MESSAGE = BULLET_POINT
+			+ "Try resetting the '" + FILTER + "' tab.";
 
 	public static final String NO_VIABLE_RESULTS_MESSAGE = BULLET_POINT
 			+ "It appears this combination of effects is not possible in the game.";
 
-	public static final String CLEARED_FILTER_MESSAGE = BULLET_POINT + "Filter(s) cleared successfully.";
+	public static final String CLEARED_FILTER_MESSAGE = BULLET_POINT
+			+ "Filter(s) cleared successfully.";
 
-	public static final String BASE_CHARACTER_CONFIG_RESET = BULLET_POINT + "The base game " + RESET_CHARACTER_CONFIG;
-	public static final String ORDINATOR_CHARACTER_CONFIG_RESET = BULLET_POINT + "The ordinator "
-			+ RESET_CHARACTER_CONFIG;
-	public static final String SHARED_CHARACTER_CONFIG_RESET = BULLET_POINT + "The shared " + RESET_CHARACTER_CONFIG;
+	public static final String BASE_CHARACTER_CONFIG_RESET = BULLET_POINT
+			+ "The base game " + RESET_CHARACTER_CONFIG;
+	public static final String ORDINATOR_CHARACTER_CONFIG_RESET = BULLET_POINT
+			+ "The ordinator " + RESET_CHARACTER_CONFIG;
+	public static final String SHARED_CHARACTER_CONFIG_RESET = BULLET_POINT
+			+ "The shared " + RESET_CHARACTER_CONFIG;
 
 	public static final String WELCOME_MESSAGE = BULLET_POINT
 			+ "Welcome to the Skyrim Alchemy Recipe Browser. Please open the help dialog from the context menu for usage.";
+
+	public static final String SAVED_CHARACTER_CONFIG = BULLET_POINT
+			+ "Successfully saved character config. This configuration will automatically load when you load the application."
+			+ " To reset this, either delete ..\\ARB_Data\\savedCharacterConfig.txt, or adjust the settings back to their defaults and re-save.";
+
+	public static final String DID_NOT_SAVE_CHARACTER_CONFIG = BULLET_POINT
+			+ "Failed to save character config. Please check the most recent log file at ..\\ARB_Data\\logs\\ for more info.";
+
+	public static final String LOADED_CHARACTER_CONFIG = BULLET_POINT
+			+ "Successfully loaded character config from the stored file.";
+
+	public static final String DID_NOT_LOAD_CHARACTER_CONFIG = BULLET_POINT
+			+ "No saved character config file found, loading default settings.";
 
 	public static final String CLOSE = "Close";
 

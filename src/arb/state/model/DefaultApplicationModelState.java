@@ -19,7 +19,9 @@ import arb.model.characterconfig.CharacterConfigKey;
 import arb.view.character.BaseGameCharacterConfigView;
 import arb.view.character.OrdinatorCharacterConfigView;
 import arb.view.character.SharedCharacterConfigView;
+import arb.view.util.LabelConstants;
 import arb.view.util.ResourcePathConstants;
+import javafx.scene.control.TextArea;
 
 /**
  * This class represents the state of the application on startup.
@@ -39,7 +41,15 @@ public class DefaultApplicationModelState extends ApplicationModelState {
 		final Map<CharacterConfigKey, String> characterConfigMapping = this
 				.updateCharacterConfigModel();
 		this.updateCharacterConfigView(characterConfigMapping);
-
+		final TextArea logTextArea = ViewController.getInstance().getLogView()
+				.getLogTextArea();
+		if (characterConfigMapping.size() > 0) {
+			logTextArea.setText(logTextArea.getText() + "\n"
+					+ LabelConstants.LOADED_CHARACTER_CONFIG);
+		} else {
+			logTextArea.setText(logTextArea.getText() + "\n"
+					+ LabelConstants.DID_NOT_LOAD_CHARACTER_CONFIG);
+		}
 	}
 
 	private Map<CharacterConfigKey, String> updateCharacterConfigModel() {

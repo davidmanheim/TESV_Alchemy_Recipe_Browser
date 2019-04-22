@@ -10,8 +10,11 @@ import java.util.Map.Entry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import arb.core.ViewController;
 import arb.model.characterconfig.CharacterConfigKey;
+import arb.view.util.LabelConstants;
 import arb.view.util.ResourcePathConstants;
+import javafx.scene.control.TextArea;
 
 /**
  * This class represents the state of the application on startup.
@@ -30,14 +33,21 @@ public class SavedCharacterConfigState extends ApplicationModelState {
 		this.updateCharacterConfig();
 		boolean success = true;
 		final File savedConfigFile = new File(ResourcePathConstants.SAVED_CONFIG);
-//		if (savedConfigFile.canWrite()) {
-		success = this.tryWriteToFile(savedConfigFile);
-//		} else {
-//			success = false;
-//			LOG.error("Could not write to saved config file");
-//		}
-
-		// TODO - write to user log based on success.
+		if (savedConfigFile.canWrite()) {
+			success = this.tryWriteToFile(savedConfigFile);
+		} else {
+			success = false;
+			LOG.error("Could not write to saved config file");
+		}
+		final TextArea logTextArea = ViewController.getInstance().getLogView()
+				.getLogTextArea();
+		if (success) {
+			logTextArea.setText(
+					logTextArea.getText() + "\n" + LabelConstants.SAVED_CHARACTER_CONFIG);
+		} else {
+			logTextArea.setText(logTextArea.getText() + "\n"
+					+ LabelConstants.DID_NOT_SAVE_CHARACTER_CONFIG);
+		}
 	}
 
 	private boolean tryWriteToFile(final File savedConfigFile) {
