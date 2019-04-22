@@ -29,7 +29,8 @@ public class ARB extends Application {
 	@Override
 	public void start(final Stage stage) throws IOException {
 		final BorderPane root = this.createRootPane(stage);
-		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(root);
+		final RootStackPane rootStackPane = LayoutFactory.getInstance()
+				.createRootStackPane(root);
 		final Scene scene = this.createScene(rootStackPane);
 		this.configureStage(stage, scene, root);
 		// These messages are just to separate executions if a log file gets re-used.
@@ -42,8 +43,8 @@ public class ARB extends Application {
 	 */
 	private Scene createScene(final Region root) {
 		final Scene scene = new Scene(root);
-		final String applicationCSS = this.getClass().getResource(ResourcePathConstants.APPLICATION_CSS)
-				.toExternalForm();
+		final String applicationCSS = this.getClass()
+				.getResource(ResourcePathConstants.APPLICATION_CSS).toExternalForm();
 		scene.getStylesheets().add(applicationCSS);
 		scene.setFill(Color.TRANSPARENT);
 		return scene;
@@ -55,18 +56,22 @@ public class ARB extends Application {
 	 */
 	private BorderPane createRootPane(final Stage stage) {
 		final BorderPane root = new BorderPane();
-		final ApplicationTitleBar menuContainer = MenuFactory.getInstance().createApplicationTitleBar(stage);
+		final ApplicationTitleBar menuContainer = MenuFactory.getInstance()
+				.createApplicationTitleBar(stage);
 		root.setTop(menuContainer);
-		final MainApplicationView topLevelSplitPane = LayoutFactory.getInstance().createMainApplicationView();
+		final MainApplicationView topLevelSplitPane = LayoutFactory.getInstance()
+				.createMainApplicationView();
 		root.setCenter(topLevelSplitPane);
 		return root;
 	}
 
 	private void configureStage(final Stage stage, final Scene scene, Region root) {
 		ViewController.getInstance().setStage(stage);
-		stage.getIcons().add(new Image(this.getClass().getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
+		stage.getIcons().add(new Image(this.getClass()
+				.getResourceAsStream(ResourcePathConstants.APPLICATION_ICON)));
 		stage.initStyle(StageStyle.TRANSPARENT);
 		stage.setScene(scene);
+		stage.setMinHeight(600);
 		// Note - the order is important here. first, the stage is shown while not
 		// maximized. Then, the model controller is initialized to set the default
 		// window state to maximized. On entering this state, the current window

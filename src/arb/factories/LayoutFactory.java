@@ -99,13 +99,15 @@ public class LayoutFactory {
 
 	public FilterPotionByTypeRadioButtons createFilterPotionByTypeRadioButtons() {
 		final FilterPotionByTypeRadioButtons filterPotionByTypeRadioButtons = new FilterPotionByTypeRadioButtons();
-		ViewController.getInstance().setFilterPotionByTypeRadioButtons(filterPotionByTypeRadioButtons);
+		ViewController.getInstance()
+				.setFilterPotionByTypeRadioButtons(filterPotionByTypeRadioButtons);
 		return filterPotionByTypeRadioButtons;
 	}
 
 	public FilterPotionsActionButtons createFilterIngredientsActionButtons() {
 		final FilterPotionsActionButtons filterIngredientsActionButtons = new FilterPotionsActionButtons();
-		ViewController.getInstance().setFilterPotionsActionButtons(filterIngredientsActionButtons);
+		ViewController.getInstance()
+				.setFilterPotionsActionButtons(filterIngredientsActionButtons);
 		return filterIngredientsActionButtons;
 	}
 
@@ -123,19 +125,22 @@ public class LayoutFactory {
 
 	public SharedCharacterConfigView createSharedCharacterConfigView() {
 		final SharedCharacterConfigView sharedCharacterConfigView = new SharedCharacterConfigView();
-		ViewController.getInstance().setSharedCharacterConfigView(sharedCharacterConfigView);
+		ViewController.getInstance()
+				.setSharedCharacterConfigView(sharedCharacterConfigView);
 		return sharedCharacterConfigView;
 	}
 
 	public BaseGameCharacterConfigView createBaseGameCharacterConfigView() {
 		final BaseGameCharacterConfigView baseGameCharacterConfigView = new BaseGameCharacterConfigView();
-		ViewController.getInstance().setBaseGameCharacterConfigView(baseGameCharacterConfigView);
+		ViewController.getInstance()
+				.setBaseGameCharacterConfigView(baseGameCharacterConfigView);
 		return baseGameCharacterConfigView;
 	}
 
 	public OrdinatorCharacterConfigView createOrdinatorCharacterConfigView() {
 		final OrdinatorCharacterConfigView ordinatorCharacterConfigView = new OrdinatorCharacterConfigView();
-		ViewController.getInstance().setOrdinatorCharacterConfigView(ordinatorCharacterConfigView);
+		ViewController.getInstance()
+				.setOrdinatorCharacterConfigView(ordinatorCharacterConfigView);
 		return ordinatorCharacterConfigView;
 	}
 
@@ -165,8 +170,10 @@ public class LayoutFactory {
 	private void createNewHelpView() {
 		final Stage helpStage = this.createHelpStage();
 		final HelpView helpView = new HelpView(helpStage);
-		final RootStackPane rootStackPane = LayoutFactory.getInstance().createRootStackPane(helpView);
-		final Scene helpScene = new Scene(rootStackPane, HELP_STAGE_WIDTH, HELP_STAGE_HEIGHT);
+		final RootStackPane rootStackPane = LayoutFactory.getInstance()
+				.createRootStackPane(helpView);
+		final Scene helpScene = new Scene(rootStackPane, HELP_STAGE_WIDTH,
+				HELP_STAGE_HEIGHT);
 		helpScene.getStylesheets().add(ResourcePathConstants.APPLICATION_CSS);
 		helpScene.setFill(Color.TRANSPARENT);
 		helpStage.setScene(helpScene);
@@ -178,6 +185,7 @@ public class LayoutFactory {
 		final Stage helpStage = new Stage();
 		helpStage.initStyle(StageStyle.TRANSPARENT);
 		helpStage.centerOnScreen();
+		helpStage.setMinHeight(600);
 		ViewController.getInstance().setHelpStage(helpStage);
 		return helpStage;
 	}
