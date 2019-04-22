@@ -3,7 +3,8 @@ A standalone JavaFX application for examining alchemy recipes in TESV: Skyrim
 
 ### Licensing / Other:
 
-Short version:  You are free to distribute, use, or add onto this work. Should you add onto it, I would love to receive feedback + suggestions for integrating it into this repository. However, in all circumstances, I insist to be credited on components of the project which I implemented. Furthermore, in no case shall another person use this work to produce a profit, whether through direct utilization of this software or an extension of it.
+Short version:  You are free to distribute, use, or add onto this work. Should you add onto it, I would love to receive feedback + suggestions for integrating it into this repository. However, in all circumstances, I insist to be credited for components of the project which I implemented (i.e. the version in this repository). Furthermore, in no case shall another person use this work to produce a profit, whether through direct utilization of this software or an extension or derivation of it.
+
 Long version: See end of README.md for a formal copyright notice.
 
 
