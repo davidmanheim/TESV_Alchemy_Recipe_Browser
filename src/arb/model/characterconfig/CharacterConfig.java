@@ -19,9 +19,12 @@ public class CharacterConfig {
 	private final SharedCharacterConfig sharedCharacterConfig;
 
 	public CharacterConfig() {
-		this.baseGameCharacterConfig = ModelFactory.getInstance().createBaseGameCharacterConfig();
-		this.ordinatorCharacterConfig = ModelFactory.getInstance().createOrdinatorCharacterConfig();
-		this.sharedCharacterConfig = ModelFactory.getInstance().createSharedCharacterConfig();
+		this.baseGameCharacterConfig = ModelFactory.getInstance()
+				.createBaseGameCharacterConfig();
+		this.ordinatorCharacterConfig = ModelFactory.getInstance()
+				.createOrdinatorCharacterConfig();
+		this.sharedCharacterConfig = ModelFactory.getInstance()
+				.createSharedCharacterConfig();
 	}
 
 	public void update(Map<CharacterConfigKey, String> baseGameCharacterConfigMapping,
@@ -35,7 +38,8 @@ public class CharacterConfig {
 
 	/** Returns a set of key-value pairs to write into a file for persistency. */
 	public Map<CharacterConfigKey, String> getStoreMapping() {
-		final Map<CharacterConfigKey, String> storeMapping = this.baseGameCharacterConfig.getStoreMapping();
+		final Map<CharacterConfigKey, String> storeMapping = this.baseGameCharacterConfig
+				.getStoreMapping();
 		storeMapping.putAll(this.ordinatorCharacterConfig.getStoreMapping());
 		storeMapping.putAll(this.sharedCharacterConfig.getStoreMapping());
 		return storeMapping;
@@ -58,27 +62,29 @@ public class CharacterConfig {
 	}
 
 	public double getCharacterConfigMultiplier(final Potion potion, final Effect effect) {
-		return this.getBaseGameTotalMultiplier(effect) * this.getOrdinatorTotalMultiplier(potion, effect)
+		return this.getBaseGameTotalMultiplier(effect)
+				* this.getOrdinatorTotalMultiplier(potion, effect)
 				* this.getSharedTotalMultiplier();
 	}
 
-	private double getBaseGameTotalMultiplier(final Effect effect) {
+	public double getBaseGameTotalMultiplier(final Effect effect) {
 		return this.baseGameCharacterConfig.getAlchemistMultiplier()
 				* this.baseGameCharacterConfig.getPhysicianMultiplier(effect)
 				* this.baseGameCharacterConfig.getBenefactorMultiplier()
 				* this.baseGameCharacterConfig.getPoisonerMultiplier();
 	}
 
-	private double getOrdinatorTotalMultiplier(final Potion potion, final Effect effect) {
+	public double getOrdinatorTotalMultiplier(final Potion potion, final Effect effect) {
 		final int skillLevel = this.sharedCharacterConfig.getSkillLevel();
 		return this.ordinatorCharacterConfig.getAlchemyMasteryMultiplier()
 				* this.ordinatorCharacterConfig.getPhysicianMultiplier(effect)
 				* this.ordinatorCharacterConfig.getAdvancedLabMultiplier()
-				* this.ordinatorCharacterConfig.getPoisonerMultiplier(potion, effect, skillLevel)
+				* this.ordinatorCharacterConfig.getPoisonerMultiplier(potion, effect,
+						skillLevel)
 				* this.ordinatorCharacterConfig.getTWDNKYMultiplier();
 	}
 
-	private double getSharedTotalMultiplier() {
+	public double getSharedTotalMultiplier() {
 		return this.sharedCharacterConfig.getTotalEnchantmentMultiplier()
 				* this.sharedCharacterConfig.getSeekerOfShadowsMultiplier();
 	}

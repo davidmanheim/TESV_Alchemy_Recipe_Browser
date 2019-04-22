@@ -168,6 +168,10 @@ public class LabelConstants {
 	public static final String DID_NOT_LOAD_CHARACTER_CONFIG = BULLET_POINT
 			+ "No saved character config file found, loading default settings.";
 
+	public static final String UNUSUAL_CHARACTER_CONFIG = "Warning: Your character configuration contains selections from"
+			+ " both the base game and the ordinator mod. As a result, calculated magnitudes will make no sense. Please"
+			+ " reset one of these views, and re-execute the search.";
+
 	public static final String CLOSE = "Close";
 
 	public static final String MINIMIZE = "Minimize";

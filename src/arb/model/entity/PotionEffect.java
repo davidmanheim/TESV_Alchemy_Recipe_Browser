@@ -82,7 +82,14 @@ public class PotionEffect {
 				.getIngredientWithHighestCost(this.ingredients, this.baseEffect);
 		this.potencyMultiplier = ingredientWithHighestCost
 				.getMagnitudeMultiplierForEffect(this.baseEffect);
-		// TODO - clarify this code w/ comments, maybe refactor it.
+		// The magnitude and duration are calculated via the formulas at
+		// https://en.uesp.net/wiki/Skyrim:Alchemy_Effects.
+		// Currently, there are a few limitations:
+		// 1) I don't know how the "Damage Health Gold cost Bug" plays into everthing.
+		// My math turns up correct numbers, so I think the wiki has appropriately
+		// adjusted the data I used.
+		// 2) Vanilla calculations are not as well tested as ordinator, since I have not
+		// used vanilla perks in a long time.
 		this.magnitude = this.baseEffect.isTimeScaling() ? this.baseEffect.getBaseMag()
 				: (int) Math.round(ALCHEMY_INIT_MULTIPLIER * this.baseEffect.getBaseMag()
 						* this.potencyMultiplier
