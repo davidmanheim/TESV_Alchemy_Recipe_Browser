@@ -1,5 +1,5 @@
 # TESV_Alchemy_Recipe_Browser
-A standalone JavaFX application for examining alchemy recipes in TESV: Skyrim
+A standalone JavaFX application for examining alchemy recipes in TESV: Skyrim. Please see sampleScreenshot.png for a quick visual of the application.
 
 ### Licensing + Usage:
 
