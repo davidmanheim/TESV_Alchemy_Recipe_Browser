@@ -1,0 +1,9 @@
+2019-04-21 23:22:59.824 WARN  arb.state.model.DefaultApplicationModelState - No character config file existed; you must first save from the context menu.
+2019-04-21 23:22:59.827 INFO  arb.core.ARB - ==============================================
+2019-04-21 23:22:59.827 INFO  arb.core.ARB - Application started successfully.
+2019-04-21 23:26:37.069 INFO  arb.state.model.ApplicationModelState - 4747 potions found after filtering.
+2019-04-21 23:26:37.113 INFO  arb.state.model.ExecuteSearchState - total computation time 590 ms
+2019-04-21 23:26:50.022 INFO  arb.state.model.ApplicationModelState - 533 potions found after filtering.
+2019-04-21 23:27:28.291 INFO  arb.state.model.ApplicationModelState - 540 potions found after filtering.
+2019-04-21 23:27:28.293 INFO  arb.state.model.ExecuteSearchState - total computation time 297 ms
+2019-04-21 23:27:33.516 INFO  arb.state.model.ApplicationModelState - 334 potions found after filtering.
