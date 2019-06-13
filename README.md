@@ -13,7 +13,7 @@ As the description suggests, this is a standalone Java application for examining
   2) Select 1 - 5 effects which must be on the potion, and search.
   3) After returning results, you may define additional criteria, such as requiring all ingredients to be from a certain extension (DLC) of the game, or requiring all ingredients to be harvestable.
   
-See ..\ARB_Data\sampleScreenshot.png for a quick visual of the application. Lastly, a more detailed overview of the application is available in the context menu -> Help.
+See sampleScreenshot.png for a quick visual of the application. Lastly, a more detailed overview of the application is available in the context menu -> Help.
   
 ### Application setup for end users:
   1) In ..\TESV_Alchemy_Recipe_Browser\ARB_Data\binaries\, find and download TESV_Alchemy_Recipe_Browser-X.X.jar, where the X's are the latest version number available. Also download FuturaCondensedBQ-Medium.otf from this directory.
